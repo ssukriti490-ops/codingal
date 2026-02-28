@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>greeting in javascript</title>
+</head>
+<body>
+<h1>hi ready to see my project</h1>
+<p> this project is made by me .this project is amazing and you see itn is very interesting.</p>
+<button onclick="myFunction()">TRY IT</button>
+
+<p id="hour"></p>
+<p id="greet"></p>
+
+<script>
+    function myFunction(){
+        var greeting;
+        var time=new Date().getHours();
+    
+     if(time<10){
+        greeting="Good Morning";
+     }
+     else if(time<20){
+        greeting="Good Evening";
+     }
+     else
+     {
+        greeting="Good Evening";
+     }
+
+     document.getElementById("hour").innerHTML ="Current Hour is:"+time;
+      document.getElementById("greet").innerHTML ="greeting";
+    }
+</script>
+</body>
+</html>
