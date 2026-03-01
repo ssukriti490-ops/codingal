@@ -8,8 +8,28 @@
 <script src=" https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
 <script src="  https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js    "></script>
 
+<style>
+body{
+    position:relative;
+}
+p{
+    font: 18px;
+}
+#section1{
+    padding-top:50px;
+    height:500px;
+    color:white;
+    background-color:maroon;
+}
+#section2{
+    padding-top:50px;
+    height:500px;
+    color:green;
+    background-color:black;
+}
+</style>
     </head>
-    <body>
+    <body data-spy="scroll" data-target=".navbar" data-offset="50">
         <div class="container" >
         <h2>Carousel Example</h2>
         <div id="mycarousel" class="carousel slide" data-ride="carousel">
@@ -45,9 +65,58 @@
         <span class="glyphicon  glyphicon-chevron-right">
         
         </span>
+        <span class="sr-only">Next</span>
          </a>
         </div>
         </div>
-        </div>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+<div class="container-fluid">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle"
+ data-toggle="collapse" data-target="#myNavbar">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="#">Codingal</a>
+</div>
+<div>
+    <div  class="collapse navbar-collapse" id="myNavbar">
+    <ul class="nav navbar-nav">
+    <li><a href="#section1">Section 1</a></li>
+    <li><a href="#section2">Section 2</a></li>
+    </ul>
+    </div>
+</div>
+</div>
+</nav>
+<div id="section1" class="container-fluid">
+<h1>Section1</h1>
+<h2>CODING</h2>
+<h3>Scroll this section.</h3>
+<p>CODING,frequently used interchangeably with computer programming, is the fundamental,
+    iterative,andhighly logical process of designing, writing,testing, and maintaining
+    instructions that allow humans to communicate with machines.At its core, a computer 
+    consits of hardware-transistors-that only understand binary  code, which is a rapid,
+    on-or-off sequence of zeros and ones. Because  writing in binary is  impractical for 
+    humans, coding serves as a  translator,utilizing  high-level programming languages
+    ( such as PythonJavaJavaScript****c++,orSwift) that feature syntax more closely resembling
+    humanlanguage.A programmer analyzes a problem,designs an algorithm(a step-by-step logical 
+    procedure to  solve it),and then translates that algorithm into source code. These  
+    instructions, which may range from a few  lines for a simple script to millions  of
+    lines for complex software, tell the  computer precisely how to behave, from rendering
+    a webpage's font  color to executing complex mathematical calculations or powering     
+    artificial intelligence .</p>
+</div>
+<div id="section2" class="container-fluid">
+<h1>Section 2</h1>
+<h3>Codingal</h3>
+<h5>Scroll this section.</h5>
+<p>Ada Lovelace is widely considered the first computer programmer, having written the
+    first algorithm intended for processing by a machine in the 1840s.Working with Charles
+    Babbage on his  proposed mechanical"Analytical Engine" she theorized that computers 
+    could do more than simple calculations</p>
+    
+</div>
     </body>
 </html>
