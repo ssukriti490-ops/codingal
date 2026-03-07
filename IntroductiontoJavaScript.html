@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+ <body>
+    <h1 id="myH"></h1>
+    <p id="myP"></p>
+    <h1>JavaScript Variable</h1>
+    <p>Sum of two Numbers</p>
+    <p id="result"></p>
+    <h2> What is JavaScript? </h2>
+    <p>JavaScript is  <b>a versatile,high-level programming language that is a core technology of the World Wide Web,
+       alongside HTML and CSS.</b> It was originally created by Brendan Eich at Netscape in 1995 to add interactivity
+       to static web pages.Running primarily in the user's web browser as a client-side scripting language, JavaScript
+       enables  dymatic content,such as animated graphics,interactive maps,fron validation, and real-time content
+       updates.It interacts with the content and style of a webpage through the Document Object Model(DOM) and Browser
+       Object Model(BOM),allowing  developers to modify HTML elements and CSS styles dynamically in response  to user
+       actions like clicks and keystrokes.<b>Over time,JavaScript has evoved into a full-stack language. With the
+       introduction of runtime enviroments like Node.js ,</b> it can also be used for server-side development,
+       enabling developers to build entire web appications using</p>
+    <p id="demo"></p>
+<script>
+document.getElementById("myH").innerHTML="JavaScript Comments";
+document.getElementById("myP").innerHTML="My first Paragraph";
+var num1=25;
+var num2=88;
+var sum=num1*num2;
+document.getElementById("result").innerHTML="The total sum is:"+sum;
+var x,y,z;
+x=65;
+y=55;
+z=x+y;
+document.getElementById("demo").innerHTML="The value of z is"+z+".";
+</script>
+</body>
+</html>
