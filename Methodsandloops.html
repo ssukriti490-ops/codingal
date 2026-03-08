@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+    <h1>JavaScript String Methods</h1>
+    <p>  JavaScript provides many built-in <b>string methods</b> that allow you
+     to manipulate and work  with text data, such as <b>extracting parts of a
+     string, modifying its case, or searching for substrings.</b>Strings are a 
+     sequence of characters,and while individual<b> characters cannot be changed 
+     after creation(strings are immutable), new</b> strings can be returned by
+      methods that perform  operations like extraction,replacement, or concatenation.  </p>
+      <h2>JavaScript For Loop</h2>
+      <p id="demo1"></p>
+      <p id="demo2"></p>
+      <script>
+        var str="AmAzInG";
+       document.write(str.toUpperCase());
+        document.write("<br>");
+         document.write(str.toLowerCase());
+        document.write("<br>");
+        document.write(str.startsWith('i'));
+        document.write("<br>");
+        var str1="I learnt about Methods";
+        var patt=new RegExp("about");
+        var res=patt.test(str);
+        document.write(res);
+        var fruits=["Apple","Mango","Graphs","Watermelon","Jack Fruit","Banana","Straberry","Pineapple","Blueberry",
+                    "Dragon Fruit","Orange"];
+        var text="";
+        var i;
+        for(i=0;i<fruits.length;i++){
+            text+= fruits[i]+"<br>";
+        }
+        document.getElementById("demo1").innerHTML=text;
+        var day;
+        switch(new Date().getDay()){ 
+            case 0:
+            day="Sunday";
+            break;
+             case 1:
+            day="Monday";
+            break;
+             case 2:
+            day="Tuesday";
+            break;
+             case 3:
+            day="Wednesday";
+            break;
+              case 4:
+            day="Thursday";
+            break;
+             case 5:
+            day="Friday";
+            break;
+             case 6:
+            day="Saturday";
+            break;
+        }
+        document.getElementById("demo2").innerHTML="Today is " + day;
+      </script>
+</body>
+</html>
