@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DOM!!!</title>
+<meta charset="utf-8">
+<meta name="veiwport" content="width=device-width, intial- scale=1">
+<style>
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+h1{
+    margin: 30 px 0 10px;
+    font-size: 34px;
+    font-weight: bold;
+}
+hr{
+    width: 85%;
+    border: none;
+    border-top:2px solid maroon;
+    margin-bottom: 50px;
+}
+.box{
+    width:299px;
+    margin: auto;
+    border: 15px solid green;
+    padding: 20px;
+}
+.row{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    gap: 15px;
+    margin: 15px;
+}
+label{
+    width:80px;
+    text-align:left;
+    font-size: 28px;
+}
+input{
+    height: 25px;
+    padding: 8px;
+    border:2px solid orangered;
+}
+#email,#password{
+    width: 600px;
+}
+#age{width: 88px;}
+button{
+    margin-top:20px;
+    padding: 5px 20px;
+    cursor:pointer;
+}
+#message{
+        margin-top: 25px;
+        font-size: 44px;
+        font-weight:600px;
+        }
+</style>
+</head>
+<body>
+    <h1 id="one">HI, WELCOME TO SEE MY PROJECT</h1>
+    <p>This is the welcome message.</p>
+    <h2>Technology</h2>
+    <p>This is the technology section.</p>
+    <p>Adding JS as separate file</p>
+    <button type="button" 
+    onclick="myFunction()">Click me !here</button>
+    <p id="hello"></p>
+    <h1>Real Time Validation Using JS</h1>
+<hr>
+<div class="box">
+<form id="loginform">
+<div class="row">
+<label>Email:</label>
+<input type="text" id="email" placeholder="myname@gmail.com">
+</div>
+<div class="row">
+<label>Password:</label>
+<input type="password" id="password"placeholder=".........">
+</div>
+<div class="row">
+<label>Age:</label>
+<input type="number" id="age">
+</div>
+<button type="submit">LOGIN</button>
+</form>
+</div>
+<p id="message"></p>
+<script>
+var text=document.getElementById("one").innerHTML;
+alert("The first heading is" + text ;
+function myFunction(){
+    var a=5;
+    document.getElementById("demo").innerHTML=a*a;
+}
+function valoidate(e){
+    e.preventDefault();
+    const email=document.getElementById('email').value;
+    const pass=document.getElementById('password').value;
+    const age=document.getElementById('age').value;
+    const msgBox=document.getElementById('message').value;
+    let message='';
+    if(email===''){
+        message='Please enter an email.';
+        msgBox.style.color='red';
+    }
+    else if(Pass===''){
+        message='Please enter a password.';
+          msgBox.style.color='green';
+    }
+     else if(age===''){
+        message='Please your age.';
+          msgBox.style.color='yellow';
+    }
+     else{
+        message='Login Successfully!!!';
+          msgBox.style.color='orange';
+    }
+    msgBox.innerHTML=message;
+}
+document.getElementById("loginForm").onsubmit = validate;
+document.getElementById("email").oninput = () => validate({ preventDefault: () => {} });
+document.getElementById("password").oninput = () => validate({ preventDefault: () => {} });
+document.getElementById("age").oninput = () => validate({ preventDefault: () => {} });
+)
+</script>
+</body>
+</html>
