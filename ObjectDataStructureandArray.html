@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head><title>Object Data Structure and Array.</title></head>
+<body>
+<h1>JavaScript Arrays</h1>
+<p id="demo0"></p>
+<h2>JavaScript Array Methods</h2>
+<h3>What is JavaScript Array Methods?</h3>
+<p>=>Methods are actions that you can perform, we have already learnt about metods in JS.
+    Someof the in-built methods in the array are .join() and .pop().  .join()-joins all 
+    array elements into a separator that is passed inside the parentheses.
+</p>
+<p id="my join"></p>
+<p id="myfirstpop"></p>
+<p id="mysecondpop"></p>
+<h2>JavaScript Functions</h2>
+<p>Do a calculation and then display the result</p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<script>
+    var chocolate=[
+        "Dairy Milk",
+        "KitKat",
+        "Milky Bar",
+        "pulse",
+        "perk",
+    ];
+     document.getElementById("demo0").innerHTML=chocolate[3];
+     var fruits=["Banana","Orange","Apple","Dragon Fruit","Mango","Strawberry","Blueberry","Pineapple","Watermelon"];
+     document.getElementById("myjoin").innerHTML=fruits.join("*");
+ document.getElementById("myfirstpop").innerHTML=fruits;
+ fruits.pop;
+document.getElementById("mysecondpop").innerHTML=fruits;
+function add(a, b ){
+return a + b ;
+};
+document.getElementById("demo1").innerHTML=result;
+function average(c, d ){
+    return add(c , d ) / 2 ;
+};
+let result=average(22 ,66 );
+document.getElementById("demo2").innerHTML=result;
+</script>
+</body>
+</html>
