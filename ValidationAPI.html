@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p>Hi,this is my project.</p>
+    <input id="id"type="number"min="150"max="250"required>
+    <button onclick="myFunction()">ok</button>
+    <p>If the number is less than 150 or greater than 250,an error  message will be displayed.</p>
+    <p id="result"></p>
+<script>
+function myFunction(){
+    var a=document.getElementById("id");
+    if(!a.checkValidity()){
+        document.getElementById("result").innerHTML=a.validationMessage;
+
+    }
+else{
+    document.getElementById("result").innerHTML="Input ok";
+}
+}
+</script>
+</body>
+</html>
