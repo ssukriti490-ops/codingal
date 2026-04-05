@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Callbacks</h1>
+<p><b>Callback is a  technique which allows a function to Call
+    another function.</b> One function can be passed as an argument
+    to another function by this callback technique.<b>JS functions 
+    are executed in an order that is called, not in an order that
+    is defined.</b> Callbacks are often used with asynchronous 
+    functions.</p>
+<p id="result"></p>
+<script>
+function myDisplayer(value){
+    document.getElementById("result").innerHTML =value;
+}
+function myCalculator(num1, num2, myCallback){
+    let sum = num1 + num2;
+    myCallback(sum);
+}
+myCalculator(35,59,myDisplayer);
+</script>  
+</body>
+</html>
