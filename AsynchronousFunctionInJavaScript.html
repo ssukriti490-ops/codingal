@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Asynchorous Function In JavaScript</title></head>
+<body>
+<h2>JSON In JavaScript</h2>
+<p id="result"></p>
+<h1>JavaScript Asyn/Await</h1>
+<h1 id="result1"></h1>
+<h3>promise in JavaScript</h3>
+<p id="demo"></p>
+<h2>JavaScript Callbacks</h2>
+<p>Do a calculator and then display the result.</p>
+<p id="result2"></p>
+<script>
+    var myObj={
+        name:"Radha", age:"13",grade:"8"
+    };
+var myJSON=JSON.stringify(myObj);
+var newObj=JSON.parse(myJSON);
+
+document.getElementById("result").innerHTML=newObj.name;
+
+async function add(a, b){
+    let response = await a + b;
+display(response);
+}
+function display(some){
+    document.getElementById("result1").innerHTML  =  some;
+}
+
+add(5,38);
+
+function myDispalyer(some){
+    document.getElementById("demo").innerHTML= some;
+}
+function sum(a,b){
+    var sum= a+b;
+    myDisplayer(sum);
+}
+let myPromise=new Promise(function(myResolve, myReject){
+    let x=5;
+
+if (x == 5) {
+    myResolve("OK");
+}
+else{
+    myReject("Error");
+}
+});
+myPromise.then(
+    function(value){sum(5,56);},
+    function(error){sum(error);}
+);
+function myDisplayer(value){
+    document.getElementById("result2").innerHTML=value;
+}
+function myCalculator(num1,num2,myCallback){
+let sum= num1+num2;
+myCallback(sum);
+}
+myCalculator(5,6,myDisplayer);
+</script>
+</body>
+</html>
