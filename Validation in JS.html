@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function validateForm(){
+                var x = document.forms["myForm"]["fname"].value;
+                if(x == ""){
+                    alert("Name must be filled out");
+                    return false;
+                }
+            }
+        </script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <title>Calculator Using JS </title>
+        <link rel="stylesheet"  href="V Calculator.css">
+    </head>
+    <body>
+    <form name="myForm" onsubmit="return validateForm()">
+        Name:<input type="text" name="fname">
+        <input type="submit" value="Submit">
+    </form>
+    <p id="message"></p>
+    <p>Enter a number and click OK:</p>
+    <input id="id" type="number" min="100" max="300" required>
+    <button onclick="myFunction()">OK</button>
+    <p>If the number is less than 100 or greater than 300,an error message wll be displayed. </p><br>
+    <p id="result"></p>
+    <script>
+        function myFunction(){
+            var inpobj = document.getElementById("id");
+            if(!inpobj.checkValidity()){
+                document.getElementById("result").innerHTML=inpobj.validationMessage;}
+                else{ document.getElementById("result").innerHTML="Input OK";
+            }
+        }
+    </script><br><br>
+    
+    <div class="calc">
+    <div class="title">Calculator</div>
+    <div class="grid">
+         <!--Display-->
+    <input id="calculator" type="text" placeholder="Result" readonly>
+    <button class="btn op" onclick="setScreenValue('+')">+</button>
+    
+         <!--Row 1-->
+   <button class="btn " onclick="setScreenValue('1')">1</button>
+     <button class="btn" onclick="setScreenValue('2')">2</button>
+     <button class="btn " onclick="setScreenValue('3')">3</button>
+     <button class="btn op " onclick="setScreenValue('-')">-</button>
+        <!--Row 2-->
+     <button class="btn " onclick="setScreenValue('4')">4</button>
+     <button class="btn" onclick="setScreenValue('5')">5</button>
+     <button class="btn " onclick="setScreenValue('6')">6</button>
+     <button class="btn op " onclick="setScreenValue('*')">x</button>
+        <!--Row 3-->
+    <button class="btn " onclick="setScreenValue('7')">7</button>
+     <button class="btn" onclick="setScreenValue('8')">8</button>
+     <button class="btn " onclick="setScreenValue('9')">9</button>
+     <button class="btn op " onclick="setScreenValue('/')">/</button>
+           <!--Row 4-->
+     <button class="btn " onclick="setScreenValue('%')">%</button>
+     <button class="btn" onclick="setScreenValue('0')">0</button>
+     <button class="btn " onclick="setScreenValue('.')">.</button>
+     <button class="btn op " onclick="calculateResult()">=</button>
+    </div>
+
+    <button class="clear"onclick="clearScreen()">CLEAR</button>
+    </div>
+
+    <script src="V Calculator.js"></script>
+
+    </body>
+</html>
