@@ -2,6 +2,7 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="   ">
+<link href="  "  rel="">
 <title>A simple calculator</title>
 <style>
     body{
@@ -9,52 +10,52 @@
         background-color: rgb(54, 4, 4);
     }
     #container{
-        width: 950px;
-        height:559;
+        width: 1000px;
+        height:550px;
         background-image: linear-gradient(rgb(6, 6, 78),red,rgb(252, 252, 2),green,white,black),
         url(bgImg.jpg);
-        margin:75px auto;
+        margin:20px auto;
     }
     #calculator{
-        width: 722px;
-        height: 525px;
+        width: 320px;
+        height: 520px;
         background-color: rgb(55, 7, 100);
-        margin: 55px;
-        top:50px;
+        margin:0 auto;
+        top:20px;
         position: relative;
-        border-radius: 10px;
-box-shadow:5px 8px 10px red,blue,yellow 2px 3px 6px green,white, black;
+        border-radius: 5px;
+box-shadow:4px 8px 6px red,blue,yellow 6px 20px 6px green,white, black;
     }
     #result{
-        height: 150px;
+        height: 10px;
     }
     #history{
         text-align:right;
-        height:50px;
-        margin:0 50px;
-        padding-top:30px;
+        height:20px;
+        margin:0 20px;
+        padding-top:20px;
         font-size:15px;
         color:red;
     }
     #output{
         text-align:right;
         height:60px;
-        margin:20px 80px;
-        font-size:8px;
+        margin:10px 20px;
+        font-size:30px;
 
     }
     #keyboard{
-        height:485px;
+        height:400px;
     }
     .operator,.number,.empty{
-        width:55px;
+        width:50px;
         height:50px;
-        margin:25px;
+        margin:15px;
         float:left;
-        border-radius:55%;
+        border-radius:50%;
         border-width:0px;
         font-weight:bold;
-        font-size:25px;
+        font-size:15px;
     }
     .number,.empty{
         background-color:rgb(92, 0, 12);
@@ -64,11 +65,32 @@ box-shadow:5px 8px 10px red,blue,yellow 2px 3px 6px green,white, black;
 
     }
 .operator:active,.number:active{
-    font-size:20px;
+    font-size:13px;
 }
 .operator:focus,.number:focus,.empty:focus{
-    outline:2;
+    outline:0;
 }
+button:nth-child(4){
+    font-size:20px;
+    background-color:aqua;
+}
+button:nth-child(8){
+    font-size:20px;
+    background-color: red;
+}
+button:nth-child(12){
+    font-size:20px;
+    background-color:rgb(3, 78, 78);
+}
+button:nth-child(16){
+    font-size:20px;
+    background-color:darkmagenta;
+}
+button:nth-child(20){
+    font-size:20px;
+    background-color:yellow;
+}
+
 </style>
 </head>
 <body>
@@ -83,7 +105,7 @@ box-shadow:5px 8px 10px red,blue,yellow 2px 3px 6px green,white, black;
 </div>
 <div id="keyboard">
 <button class="operator" id="clear">C</button>
-<button class="operator" id="clear">AC</button>
+<button class="operator" id="clear">CE</button>
 <button class="operator" id="%">%</button>
 <button class="operator" id="/">/</button>
 <button class="number" id="7">7</button>
@@ -102,7 +124,6 @@ box-shadow:5px 8px 10px red,blue,yellow 2px 3px 6px green,white, black;
 <button class="number" id="0">0</button>
 <button class="empty" id="empty"></button>
 <button class="operator" id="=">=</button>
-</div>
 </div>
 </div>
 </div>
